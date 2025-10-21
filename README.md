@@ -1,7 +1,8 @@
 # 🎉Eleflai🎉
+## It only takes a few simple steps to master the use of Eleflai.🤳
+https://github.com/user-attachments/assets/a04c8065-e904-4943-b376-f081aa455f6b
 ## Eleflai is an AI-powered wireless otoscope designed to enhance ear health management in primary care settings.
 ![Eleflai-demo](https://github.com/user-attachments/assets/558222f6-e412-4465-adf4-5fd32cc773c3)
-
 # Model Architecture🤖
 ## YOLOV8-architecture
 <img width="1000" height="1047" alt="yolov8-architecture" src="https://github.com/user-attachments/assets/85f97941-3f84-421d-b47e-a3aa7f922356" />
