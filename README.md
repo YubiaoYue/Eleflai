@@ -1,5 +1,6 @@
 # 🎉Eleflai🎉
 ## It only takes a few simple steps to master the use of Eleflai.🤳
+Eleflai is an AI-assisted otoscopy system comprising a mobile otoscope, a companion app, cloud-based analysis, and an image-analysis model. This repository provides model training scripts and an offline inference demonstration notebook. The mobile app and cloud backend source code are not included in this repository.
 https://github.com/user-attachments/assets/a04c8065-e904-4943-b376-f081aa455f6b
 ## Eleflai is an AI-powered wireless otoscope designed to enhance ear health management in primary care settings.
 ![Eleflai-demo](https://github.com/user-attachments/assets/558222f6-e412-4465-adf4-5fd32cc773c3)
