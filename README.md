@@ -1,7 +1,9 @@
 # 🎉Eleflai🎉
 ## It only takes a few simple steps to master the use of Eleflai.🤳
 Eleflai is an AI-assisted otoscopy system comprising a mobile otoscope, a companion app, cloud-based analysis, and an image-analysis model. This repository provides model training scripts and an offline inference demonstration notebook. The mobile app and cloud backend source code are not included in this repository.
+
 https://github.com/user-attachments/assets/a04c8065-e904-4943-b376-f081aa455f6b
+
 ## Eleflai is an AI-powered wireless otoscope designed to enhance ear health management in primary care settings.
 ![Eleflai-demo](https://github.com/user-attachments/assets/558222f6-e412-4465-adf4-5fd32cc773c3)
 # Model Architecture🤖
@@ -13,3 +15,25 @@ https://github.com/user-attachments/assets/a04c8065-e904-4943-b376-f081aa455f6b
 
 ## YOLOV10-architecture
 <img width="1080" height="1186" alt="yolov10-architecture" src="https://github.com/user-attachments/assets/6975ac0b-116e-48be-b59c-56ac1f7c7154" />
+
+## Repository contents
+
+- `Eleflai_inference_workflow_demo.ipynb`: an offline inference demonstration using previously acquired otoscopic images.
+- `yolov8_finetune.py`, `yolov9_finetune.py`, and `yolov10_finetune.py`: model fine-tuning scripts.
+- `SparK/`: code for the self-supervised pretraining component.
+
+## Hardware requirements
+
+The offline inference notebook processes existing image files and does not require the Eleflai mobile otoscope. The deployed clinical workflow uses the Eleflai mobile otoscope, companion app, network connection, and cloud-based analysis service. The app and cloud backend source code are not included in this repository.
+
+## Offline inference notebook
+
+The notebook specifies the following default paths:
+
+- Dataset configuration: `demo_assets/github_demo_dataset.yaml`
+- Model checkpoint: `weights/eleflai_yolo_demo.pt`
+- Output directory: `demo_outputs/`
+
+Users can set `DEVICE` to `"cpu"` for CPU inference or `"cuda:0"` for a compatible CUDA GPU. They can specify their own image paths using `IMAGE_PATHS`, or provide a dataset YAML file and change `DATA_YAML_PATH`.
+
+The notebook is designed to save detection results as a CSV file, a JSON file, and images with predicted bounding boxes in `demo_outputs/`.
