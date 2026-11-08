@@ -37,3 +37,48 @@ The notebook specifies the following default paths:
 Users can set `DEVICE` to `"cpu"` for CPU inference or `"cuda:0"` for a compatible CUDA GPU. They can specify their own image paths using `IMAGE_PATHS`, or provide a dataset YAML file and change `DATA_YAML_PATH`.
 
 The notebook is designed to save detection results as a CSV file, a JSON file, and images with predicted bounding boxes in `demo_outputs/`.
+
+## Installation guide
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YubiaoYue/Eleflai.git
+cd Eleflai
+```
+
+### YOLO fine-tuning and offline inference
+
+Create a separate Python environment:
+
+```bash
+conda create -n eleflai-yolo python=3.10 -y
+conda activate eleflai-yolo
+```
+
+Install the PyTorch build appropriate for your operating system and CPU/CUDA configuration, following the [official PyTorch installation guide](https://pytorch.org/get-started/locally/). Then install the packages used by the YOLO scripts and demonstration notebook:
+
+```bash
+python -m pip install ultralytics==8.3.29 pillow pandas matplotlib notebook
+python -m pip check
+```
+
+To open the offline demonstration:
+
+```bash
+python -m notebook Eleflai_inference_workflow_demo.ipynb
+```
+
+The notebook additionally requires input images and a compatible inference checkpoint at the paths specified in the notebook.
+
+### SparK pretraining
+
+SparK pretraining uses a separate environment. See `SparK/INSTALL.md` for the original SparK dependency recommendations. Install the PyTorch build verified for the pretraining hardware, followed by the dependencies listed in this repository:
+
+```bash
+conda create -n eleflai-spark python=[VERIFIED_PYTHON_VERSION] -y
+conda activate eleflai-spark
+# Install the verified PyTorch and torchvision versions here.
+python -m pip install -r SparK/pretrain/requirements.txt
+python -m pip check
+```
